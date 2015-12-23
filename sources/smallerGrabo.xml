@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:business xmlns:ns2="jaxb.model">
+	<grabo>
+		<business>
+			<id>4889</id>
+			<name>Fujifilm Pro Photo Center</name>
+			<category>Други</category>
+			<cities>
+				<city>София</city>
+				<city>Пловдив</city>
+				<city>Варна</city>
+				<city>Бургас</city>
+				<city>Стара Загора</city>
+				<city>Плевен</city>
+				<city>Велико Търново</city>
+			</cities>
+			<reviews>
+				<review>
+					<date>2015-11-03 11:38:35</date>
+					<user_id>465967</user_id>
+					<rating>5</rating>
+					<message>Супер сте!</message>
+				</review>
+				<review>
+					<date>2015-11-03 09:14:47</date>
+					<user_id>276157</user_id>
+					<rating>1</rating>
+					<message>Разочароващо качество и обслужване! Неадекватно отношение от страна на управителката на фотото, убеждаваща ме, че съм снимала с мобилен телефон и затова жълтото и лилавото преобладават, снегът е син, а лицата на всички са гримирани и размазани! Крайният резултат е изгубени пари и време.</message>
+				</review>
+			</reviews>
+		</business>
+		<business>
+			<id>2051</id>
+			<name>Happy Bar &amp; Grill</name>
+			<category>Заведения</category>
+			<cities>
+				<city>София</city>
+				<city>Пловдив</city>
+				<city>Русе</city>
+				<city>Шумен</city>
+			</cities>
+			<reviews>
+				<review>
+					<date>2015-11-06 08:54:07</date>
+					<user_id>185298</user_id>
+					<rating>3</rating>
+					<message>По принцип харесвам сушито в Happy. Но този път не ми хареса толкова много, оризът беше много слепнат. Иначе обстановката и обслужването са на ниво, както и другите предлагани храни и напитки. Ще ги посетя отново.</message>
+				</review>
+				<review>
+					<date>2015-11-04 20:24:19</date>
+					<user_id>187312</user_id>
+					<rating>5</rating>
+					<message>Страхотно суши :)</message>
+				</review>
+			</reviews>
+		</business>
+	</grabo>
+</ns2:business>
