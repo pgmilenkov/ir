@@ -61,7 +61,7 @@ public class Offer {
 	}
 
 	public void setCity(List<String> cities) {
-		this.citiesList = cities;
+		this.citiesList = new ArrayList<>(cities);
 	}
 
 	@XmlElementWrapper(name = "reviews")
@@ -71,7 +71,7 @@ public class Offer {
 	}
 
 	public void setReview(List<Review> reviews) {
-		this.reviewList = reviews;
+		this.reviewList = new ArrayList<>(reviews);
 	}
 	
 	public String toString() {

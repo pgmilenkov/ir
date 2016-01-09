@@ -27,6 +27,6 @@ public class Business {
 	}
 
 	public void setOffers(List<Offer> offers) {
-		this.offers = offers;
+		this.offers = new ArrayList<>(offers);
 	}
 }
