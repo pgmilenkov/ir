@@ -73,4 +73,15 @@ public class Offer {
 	public void setReview(List<Review> reviews) {
 		this.reviewList = reviews;
 	}
+	
+	public String toString() {
+		StringBuilder cities = new StringBuilder();
+		for (String city : citiesList)
+			cities.append(city);
+
+		StringBuilder reviews = new StringBuilder();
+		for (Review review : reviewList)
+			cities.append(review);
+		return String.format("Id: %d\nName: %s\nCategories: %s\nCities: %s\nReviews: %s\n", id, name, category, cities.toString(), reviews.toString());
+	}
 }

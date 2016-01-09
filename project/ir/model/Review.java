@@ -50,4 +50,8 @@ public class Review {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+	
+	public String toString() {
+		return String.format("Date: %s\tUserid: %d\tRating: %d\tMessage: %s",date.toString(), userId, rating, message);
+	}
 }
