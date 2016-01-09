@@ -10,7 +10,5 @@ public enum Categories {
 	BEAUTY_RELAX,
 	CULTURE,
 	HEALTH,
-	ZA_DECATA,
-	
-	
+	KIDS,// za decata
 }

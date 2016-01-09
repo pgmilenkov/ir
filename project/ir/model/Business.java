@@ -13,7 +13,7 @@ public class Business {
 	private List<Offer> offers;
 
 	public Business() {
-		this(new ArrayList<>());
+		this(new ArrayList<Offer>());
 	}
 	
 	public Business(List<Offer> offers) {

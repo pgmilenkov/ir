@@ -27,7 +27,7 @@ public class Offer {
 	
 	
 	public Offer() {
-		this(0, "a", null, new ArrayList<>(), new ArrayList<>());
+		this(0, "a", null, new ArrayList<String>(), new ArrayList<Review>());
 	}
 	
 	public String getName() {
