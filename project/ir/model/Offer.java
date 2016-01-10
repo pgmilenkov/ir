@@ -13,11 +13,11 @@ import javax.xml.bind.annotation.XmlType;
 public class Offer {
 	private long id;
 	private String name;
-	private Categories category;
+	private String category;
 	private List<String> citiesList;
 	private List<Review> reviewList;
 	
-	public Offer(long _id, String _name, Categories c, List<String> cit, List<Review> r) {
+	public Offer(long _id, String _name, String c, List<String> cit, List<Review> r) {
 		id = _id;
 		name = _name;
 		category = c;
@@ -38,11 +38,11 @@ public class Offer {
 		this.name = name;
 	}
 
-	public Categories getCategory() {
+	public String getCategory() {
 		return category;
 	}
 
-	public void setCategory(Categories category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 
@@ -76,12 +76,16 @@ public class Offer {
 	
 	public String toString() {
 		StringBuilder cities = new StringBuilder();
-		for (String city : citiesList)
+		for (String city : citiesList){
 			cities.append(city);
+			cities.append(" ");
+		}
 
 		StringBuilder reviews = new StringBuilder();
-		for (Review review : reviewList)
+		for (Review review : reviewList) {
 			cities.append(review);
+			cities.append("\n");
+		}
 		return String.format("Id: %d\nName: %s\nCategories: %s\nCities: %s\nReviews: %s\n", id, name, category, cities.toString(), reviews.toString());
 	}
 }

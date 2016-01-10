@@ -52,6 +52,6 @@ public class Review {
 	}
 	
 	public String toString() {
-		return String.format("Date: %s\tUserid: %d\tRating: %d\tMessage: %s",date.toString(), userId, rating, message);
+		return String.format("Date: %s\nUserid: %d\nRating: %d\nMessage: %s\n",date.toString(), userId, rating, message);
 	}
 }
