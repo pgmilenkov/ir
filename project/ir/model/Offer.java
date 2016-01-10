@@ -83,9 +83,9 @@ public class Offer {
 
 		StringBuilder reviews = new StringBuilder();
 		for (Review review : reviewList) {
-			cities.append(review);
-			cities.append("\n");
+			reviews.append(review);
+			reviews.append("\n");
 		}
-		return String.format("Id: %d\nName: %s\nCategories: %s\nCities: %s\nReviews: %s\n", id, name, category, cities.toString(), reviews.toString());
+		return String.format("Id: %d\nName: %s\nCategories: %s\nCities: %s\nReviews:\n%s\n", id, name, category, cities.toString(), reviews.toString());
 	}
 }

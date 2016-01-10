@@ -71,14 +71,13 @@ public class Application_v1 {
 			iFile.delete();
 		}
 		analyzer = new StandardAnalyzer();
-		Directory index = null; // FSDirectory.open(iFile);
+		Directory index = FSDirectory.open(iFile.toPath());
 		IndexWriterConfig config = new IndexWriterConfig(analyzer);
 		try {
 			indexWriter = new IndexWriter(index, config);
 			addDocuments();
 			indexReader = DirectoryReader.open(index);
 			indexSearcher = new IndexSearcher(indexReader);
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -114,11 +113,9 @@ public class Application_v1 {
 
 	public ScoreDoc[] search(Query q) throws IOException {
 		int hitsPerPage = 10;
-		TopScoreDocCollector collector = null; // TopScoreDocCollector.create(hitsPerPage,
-												// true);
+		TopScoreDocCollector collector = TopScoreDocCollector.create(hitsPerPage);
 		indexSearcher.search(q, collector);
-		ScoreDoc[] hits = collector.topDocs().scoreDocs;
-		return hits;
+		return collector.topDocs().scoreDocs;
 	}
 
 	public void printDoc(int docId) throws IOException {
