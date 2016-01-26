@@ -13,23 +13,23 @@ import javax.xml.bind.annotation.XmlType;
 public class Offer {
 	private long id;
 	private String name;
-	private String category;
+	private Categories category;
+	private double price;
 	private List<String> citiesList;
 	private List<Review> reviewList;
-	
-	public Offer(long _id, String _name, String c, List<String> cit, List<Review> r) {
+
+	public Offer(long _id, String _name, Categories c, List<String> cit, List<Review> r) {
 		id = _id;
 		name = _name;
 		category = c;
 		citiesList = new ArrayList<>(cit);
 		reviewList = new ArrayList<>(r);
 	}
-	
-	
+
 	public Offer() {
 		this(0, "a", null, new ArrayList<String>(), new ArrayList<Review>());
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -38,11 +38,11 @@ public class Offer {
 		this.name = name;
 	}
 
-	public String getCategory() {
+	public Categories getCategory() {
 		return category;
 	}
 
-	public void setCategory(String category) {
+	public void setCategory(Categories category) {
 		this.category = category;
 	}
 
@@ -52,6 +52,14 @@ public class Offer {
 
 	public void setId(long _id) {
 		id = _id;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double p) {
+		price = p > 0 ? p : 0;
 	}
 
 	@XmlElementWrapper(name = "cities")
@@ -73,19 +81,10 @@ public class Offer {
 	public void setReview(List<Review> reviews) {
 		this.reviewList = new ArrayList<>(reviews);
 	}
-	
-	public String toString() {
-		StringBuilder cities = new StringBuilder();
-		for (String city : citiesList){
-			cities.append(city);
-			cities.append(" ");
-		}
 
-		StringBuilder reviews = new StringBuilder();
-		for (Review review : reviewList) {
-			reviews.append(review);
-			reviews.append("\n");
-		}
-		return String.format("Id: %d\nName: %s\nCategories: %s\nCities: %s\nReviews:\n%s\n", id, name, category, cities.toString(), reviews.toString());
+	@Override
+	public String toString() {
+		return String.format("%d %s %s %.2f %s %s", id, name, category, price, citiesList,
+		        reviewList);
 	}
 }

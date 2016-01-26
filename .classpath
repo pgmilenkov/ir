@@ -11,5 +11,6 @@
 	<classpathentry kind="lib" path="C:/eclipses/libraries/jaxb-ri/lib/jaxb-impl.jar"/>
 	<classpathentry kind="lib" path="C:/eclipses/libraries/jaxb-ri/lib/jaxb-jxc.jar"/>
 	<classpathentry kind="lib" path="C:/eclipses/libraries/jaxb-ri/lib/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="C:/eclipses/libraries/jdom-2.0.6/jdom-2.0.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

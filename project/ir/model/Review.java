@@ -1,38 +1,40 @@
 package ir.model;
 
+import java.util.Date;
+
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(propOrder = { "date", "user_id", "rating", "message"})
+@XmlType(propOrder = { "date", "user_id", "rating", "message" })
 public class Review {
-	private String date;
-	private String userId;
+	private Date date;
+	private long userId;
 	private int rating;
 	private String message;
-	
+
 	public Review() {
-		this("", "", 1,"message");
+		this(new Date(), 0, 1, "message");
 	}
-	
-	public Review(String d, String u, int r, String m) {
+
+	public Review(Date d, long u, int r, String m) {
 		date = d;
 		userId = u;
 		rating = r;
 		message = m;
 	}
 
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 
-	public String getUser_id() {
+	public long getUser_id() {
 		return userId;
 	}
 
-	public void setUser_id(String userId) {
+	public void setUser_id(long userId) {
 		this.userId = userId;
 	}
 
@@ -51,8 +53,9 @@ public class Review {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	
+
+	@Override
 	public String toString() {
-		return String.format("Date: %s\nUserid: %s\nRating: %d\nMessage: %s\n", date, userId, rating, message);
+		return String.format("%s %d %d\n%s", date, userId, rating, message);
 	}
 }
