@@ -67,7 +67,6 @@ public class StreamReader {
 					offer.setCity(readCities());
 				else if (elementName.equals("reviews"))
 					offer.setReview(readReviews());
-				else System.out.println(reader.toString());
 			} else if (next == XMLStreamReader.END_ELEMENT) {
 				return offer;
 			}

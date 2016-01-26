@@ -30,11 +30,11 @@ public class Review {
 		this.date = date;
 	}
 
-	public long getUser_id() {
+	public long getUserId() {
 		return userId;
 	}
 
-	public void setUser_id(long userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 
@@ -58,4 +58,5 @@ public class Review {
 	public String toString() {
 		return String.format("%s %d %d\n%s", date, userId, rating, message);
 	}
+
 }
